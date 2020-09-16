@@ -25,7 +25,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/NessusProfessional</HostDir>
-      <ContainerDir>/config<ContainerDir/>
+      <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
