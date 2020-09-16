@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Date>2020-09-16</Date>
+  <Category>Security Tools:Utilities</Category>
+  <Name>NessusProfessional</Name>
+  <Repository>stevemcgrath/nessus_scanner</Repository>
+  <Registry>https://registry.hub.docker.com/r/stevemcgrath/nessus_scanner<Registry/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.tenable.com/products/nessus/nessus-professional<Project/>
+  <Overview>Nessus was built from the ground-up with a deep understanding of how security practitioners work. Every feature in Nessus is designed to make vulnerability assessment simple, easy and intuitive. The result: less time and effort to assess, prioritize, and remediate issues.</Overview>
+  <Description>
+    Nessus was built from the ground-up with a deep understanding of how security practitioners work. Every feature in Nessus is designed to make vulnerability assessment simple, easy and intuitive. The result: less time and effort to assess, prioritize, and remediate issues.
+    To fully configure Nessus Professional you will need to provide your License Key/Linking Key, admin username, and admin password. In the settings below you can set your admin username, password, and license/linking key.
+    [br][br]
+    Additional parameters and available options can be found on Steve McGrath's docker hub page: https://hub.docker.com/r/stevemcgrath/nessus_scanner and can be configured via the Extra Parameters section in advanced view.
+  </Description>
+  <WebUI>https://[IP]:[PORT:8834]/</WebUI>
+  <Icon>https://community.tenable.com/resource/1572999573000/Tenable_Resources/icons/tn_Icon.png</Icon>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/NessusProfessional</HostDir>
+      <ContainerDir>/config<ContainerDir/>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Config Name="LICENSE" Target="LICENSE" Default="" Mode="" Description="Add your Nessus license key" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LINKING_KEY" Target="LINKING_KEY" Default="" Mode="" Description="Add your Nessus linking key for use with Tenable.io" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ADMIN_USER" Target="ADMIN_USER" Default="admin" Mode="" Description="Change if you don't 'admin' as the default username" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="ADMIN_PASS" Target="ADMIN_PASS" Default="" Mode="" Description="No default is set MUST be configured" Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>
