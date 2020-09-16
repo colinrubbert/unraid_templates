@@ -4,7 +4,7 @@
   <Category>Security Tools:Utilities</Category>
   <Name>NessusProfessional</Name>
   <Repository>stevemcgrath/nessus_scanner</Repository>
-  <Registry>https://registry.hub.docker.com/r/stevemcgrath/nessus_scanner</Registry>
+  <Registry>https://hub.docker.com/r/stevemcgrath/nessus_scanner</Registry>
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
