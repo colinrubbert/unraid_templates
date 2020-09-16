@@ -6,13 +6,13 @@
   <Repository>stevemcgrath/nessus_scanner</Repository>
   <Registry>https://registry.hub.docker.com/r/stevemcgrath/nessus_scanner<Registry/>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>bridge</Mode>
     <Publish/>
   </Networking>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support/>
-  <Project>https://www.tenable.com/products/nessus/nessus-professional<Project/>
+  <Project>https://www.tenable.com/products/nessus/nessus-professional</Project>
   <Overview>Nessus was built from the ground-up with a deep understanding of how security practitioners work. Every feature in Nessus is designed to make vulnerability assessment simple, easy and intuitive. The result: less time and effort to assess, prioritize, and remediate issues.</Overview>
   <Description>
     Nessus was built from the ground-up with a deep understanding of how security practitioners work. Every feature in Nessus is designed to make vulnerability assessment simple, easy and intuitive. The result: less time and effort to assess, prioritize, and remediate issues.
