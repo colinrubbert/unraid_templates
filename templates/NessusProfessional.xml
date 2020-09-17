@@ -24,8 +24,8 @@
   <Icon>https://community.tenable.com/resource/1572999573000/Tenable_Resources/icons/tn_Icon.png</Icon>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/NessusProfessional</HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <HostDir>/mnt/user/appdata/</HostDir>
+      <ContainerDir>/opt/nessus/var/nessus/users/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -33,4 +33,5 @@
   <Config Name="LINKING_KEY" Target="LINKING_KEY" Default="" Mode="" Description="Add your Nessus linking key for use with Tenable.io" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="ADMIN_USER" Target="ADMIN_USER" Default="admin" Mode="" Description="Change if you don't 'admin' as the default username" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="ADMIN_PASS" Target="ADMIN_PASS" Default="" Mode="" Description="No default is set MUST be configured" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Nessus audits, files, and reports directory." Target="/opt/nessus/var/nessus/users/" Default="" Mode="rw" Description="Location for the Nessus user's audits, files, and reports directory." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/</Config>
 </Container>
