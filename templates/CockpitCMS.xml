@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Date>2021-09-14</Date>
+  <Category>Network:Web</Category>
+  <Name>Cockpit CMS</Name>
+  <Repository>agentejo/cockpit</Repository>
+  <Registry>https://hub.docker.com/r/agentejo/cockpit</Registry>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://getcockpit.com/</Project>
+  <Overview>Nessus was built from the ground-up with a deep understanding of how security practitioners work. Every feature in Nessus is designed to make vulnerability assessment simple, easy and intuitive. The result: less time and effort to assess, prioritize, and remediate issues.</Overview>
+  <Description>
+    Nessus was built from the ground-up with a deep understanding of how security practitioners work. Every feature in Nessus is designed to make vulnerability assessment simple, easy and intuitive. The result: less time and effort to assess, prioritize, and remediate issues.
+    To fully configure Nessus Professional you will need to provide your License Key/Linking Key, admin username, and admin password. In the settings below you can set your admin username, password, and license/linking key.
+    [br][br]
+    Additional parameters and available options can be found on Steve McGrath's docker hub page: https://hub.docker.com/r/stevemcgrath/nessus_scanner and can be configured via the Extra Parameters section in advanced view.
+  </Description>
+  <WebUI>https://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://getcockpit.com/site/assets/cockpit.svg</Icon>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/</HostDir>
+      <ContainerDir>/opt/cockpit/var/cockpit/users/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+</Container>
