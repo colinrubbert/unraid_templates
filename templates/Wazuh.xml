@@ -13,7 +13,7 @@
   <Category/>
   <TemplateURL/>
   <WebUI>https://[IP]:[PORT:443]/</WebUI>
-  <Icon>https://avatars.githubusercontent.com/u/13752566?s=200&v=4</Icon>
+  <Icon>https://avatars.githubusercontent.com/u/13752566</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
