@@ -11,8 +11,8 @@
   <Project/>
   <Overview/>
   <Category/>
-  <WebUI/>
   <TemplateURL/>
+  <WebUI>https://[IP]:[PORT:443]/</WebUI>
   <Icon>https://avatars.githubusercontent.com/u/13752566?s=200&v=4</Icon>
   <ExtraParams/>
   <PostArgs/>
@@ -112,7 +112,7 @@
   <Config Name="1515/tcp" Target="1515" Default="" Mode="tcp" Description="Container Port: 1515" Type="Port" Display="always" Required="false" Mask="false">1515</Config>
   <Config Name="1516/tcp" Target="1516" Default="" Mode="tcp" Description="Container Port: 1516" Type="Port" Display="always" Required="false" Mask="false">1516</Config>
   <Config Name="514/udp" Target="514" Default="" Mode="udp" Description="Container Port: 514" Type="Port" Display="always" Required="false" Mask="false">514</Config>
-  <Config Name="443/udp" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="443/tcp" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
   <Config Name="/var/log" Target="/var/log" Default="" Mode="rw" Description="Container Path: /var/log" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/docker/appdata/wazuh/var/log</Config>
   <Config Name="/var/log/filebeat" Target="/var/log/filebeat" Default="" Mode="rw" Description="Container Path: /var/log/filebeat" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/docker/appdata/wazuh/var/log/filebeat</Config>
 </Container>
