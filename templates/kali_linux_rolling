@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Date>2022-10-14</Date>
+  <Category>Network:Security</Category>
+  <Name>Kali Linux</Name>
+  <Repository>kalilinux/kali-rolling</Repository>
+  <Registry>https://hub.docker.com/r/kalilinux/kali-rolling</Registry>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://kali.org/</Project>
+  <Overview>Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks.</Overview>
+  <Description>
+    Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.
+    [br][br]
+    
+  </Description>
+  <WebUI>https://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://www.kali.org/images/kali-logo.svg</Icon>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/</HostDir>
+      <ContainerDir>/opt/kali-linux/var/kali-linux/users/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+</Container>
