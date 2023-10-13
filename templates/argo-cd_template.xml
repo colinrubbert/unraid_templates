@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Date>2023-10-13</Date>
+  <Category>Security Tools:Utilities</Category>
+  <Name>ArgoCD</Name>
+  <Repository>bitnami/argo-cd</Repository>
+  <Registry>https://hub.docker.com/r/bitnami/argo-cd</Registry>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://argoproj.github.io/cd/</Project>
+  <Overview>Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.</Overview>
+  <Description>
+   Application definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.
+  </Description>
+  <WebUI>https://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://argoproj.github.io/icons/icon-144x144.png</Icon>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/</HostDir>
+      <ContainerDir>/opt/argocd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+</Container>
