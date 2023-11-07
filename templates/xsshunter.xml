@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Date>2023-11-07</Date>
+  <Category>Security Tools:Utilities</Category>
+  <Name>XSS Hunter</Name>
+  <Repository>l4rm4nd/xsshunter</Repository>
+  <Registry>https://hub.docker.com/r/l4rm4nd/xsshunter</Registry>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/trufflesecurity/xsshunter</Project>
+  <Overview>XSS Hunter allows you to find all kinds of cross-site scripting vulnerabilities, including the often-missed blind XSS.</Overview>
+  <Description>
+   XSS Hunter allows you to find all kinds of cross-site scripting vulnerabilities, including the often-missed blind XSS. The service works by hosting specialized XSS probes which, upon firing, scan the page and send information about the vulnerable page to the XSS Hunter service.
+    [br][br]
+  </Description>
+  <WebUI>https://[IP]:[PORT:8081]/</WebUI>
+  <Icon>https://th.bing.com/th/id/OIG.7ShKu7gFiMm670jvzjUA?pid=ImgGn</Icon>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/</HostDir>
+      <ContainerDir>/app/payload-fire-images</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <!--  Environment configurations  -->
+  <Config Name="NODE_ENV" Target="NODE_ENV" Default="production" Mode="" Description="Set this to the hostname you want the xss probe on. ex: xss.example.com" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SESSION_SECRET_KEY" Target="SESSION_SECRET_KEY" Default="" Mode="" Description="Set this to a long random string" Type="Variable" Display="always" Required="false" Mask="mask"/>
+  <Config Name="HOSTNAME" Target="HOSTNAME" Default="" Mode="" Description="Set this to the hostname you want the admin panel on. ex: admin.example.com" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="XSS_HOSTNAME" Target="XSS_HOSTNAME" Default="" Mode="" Description="Set this to the hostname you want the xss probe on. ex: xss.example.com" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <!--   Basic user configurations -->
+  <Config Name="PANEL_USERNAME" Target="PANEL_USERNAME" Default="admin@example.com" Mode="" Description="Set the admin panel username. Note: it has to be an email address if you plan to setup and enable email notification." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PANEL_PASSWORD" Target="PANEL_PASSWORD" Default="" Mode="" Description="Set the password for the admin panel username." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="PANEL_USERPASS_LIST" Target="PANEL_USERPASS_LIST" Default="" Mode="" Description="Enable if you plan to use multi-user setup. The variable should be as follows: [\"some_email@example.com:somepass\",\"another_email@another_example.com:anotherpass\"]" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ALLOW_EMPTY_USERPATH" Target="ALLOW_EMPTY_USERPATH" Default="true" Mode="" Description="Boolean value to allow empty userpath. Default set to true." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <!--  XSS hunter app configurations  -->
+  <Config Name="CONTROL_PANEL_ENABLED" Target="CONTROL_PANEL_ENABLED" Default="true" Mode="" Description="If you want to minimize the attack surface of your instance you can disable the web control panel. This makes it so you'll only receive emails of payload fires (results will still be stored on disk and in the database)." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <!--  Email notification configurations  -->
+  <Config Name="EMAIL_NOTIFICATIONS_ENABLED" Target="EMAIL_NOTIFICATIONS_ENABLED" Default="false" Mode="" Description="Boolean value to enable email notifications. Default is set to: false." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="EMAIL_FROM" Target="EMAIL_FROM" Default="xsshunter@example.com" Mode="" Description="Set the FROM email address." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <!--  OAuth configurations  -->
+  <Config Name="OAUTH_LOGIN" Target="OAUTH_LOGIN" Default="false" Mode="" Description="Boolean value to enable this feature." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CLIENT_ID" Target="CLIENT_ID" Default="" Mode="" Description="Your Google OAuth Client Id" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CLIENT_ID" Target="CLIENT_ID" Default="" Mode="" Description="Your Google OAuth Client Secret" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="GMAIL_ACCOUNTS" Target="GMAIL_ACCOUNTS" Default="" Mode="" Description="List of Gmail addresses that are allowed to create accounts and login. Atleast one email address is required. If you want to allow anyone to sign up, remove this variable from the .env file" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <!-- Postgres Database configurations   -->
+  <Config Name="DATABASE_HOST" Target="DATABASE_HOST" Default="xsshunterexpress-db" Mode="" Description="Set this to the hostname you want the xss probe on. ex: xss.example.com" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PORT" Target="PORT" Default="8080" Mode="" Description="Set this to the hostname you want the xss probe on. ex: xss.example.com" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="xsshunterexpress" Mode="" Description="Set the postgres database name. Note: leave defaults set unless you are planning on exposing this to the public internet." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="xsshunterexpress" Mode="" Description="Set the postgres username. Note: leave defaults set unless you are planning on exposing this to the public internet." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="xsshunterexpress" Mode="" Description="Set the password for the postgres user. Note: leave defaults set unless you are planning on exposing this to the public internet." Type="Variable" Display="always" Required="true" Mask="true"/>
+<!--   Misc configuration options for: screenshot directory, trufflehog url, Sentry DSN, etc -->
+  <Config Name="SCREENSHOTS_DIR" Target="SCREENSHOTS_DIR" Default="/app/payload-fire-images" Mode="" Description="Directory where payload fire screenshots are stored." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="TRUFFLEHOG_URL" Target="TRUFFLEHOG_URL" Default="http://xsshunterexpress-trufflehog:8000/trufflehog" Mode="" Description="Default trufflehog xsshunter-express url." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SENTRY_DSN" Target="SENTRY_DSN" Default="" Mode="" Description="Sentry DSN Client Key" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="SENTRY_ENABLED" Target="SENTRY_ENABLED" Default="false" Mode="" Description="Set boolean value to determine if you are using Sentry DSN." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <!--   Cloud storage configuration settings -->
+  <Config Name="USE_CLOUD_STORAGE" Target="USE_CLOUD_STORAGE" Default="false" Mode="" Description="Set whether or not if you are using a cloud storage to save your payload fires." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="BUCKET_NAME" Target="BUCKET_NAME" Default="" Mode="" Description="Name of your cloud storage bucket." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
