@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>BB - Android Emulator</Name>
+  <Repository>budtmo/docker-android:emulator_9.0-with-gapps</Repository>
+  <Registry>https://hub.docker.com/r/budtmo/docker-android</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.143.22</MyIP>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:6080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/32689599?s=200&v=4</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs/>
+  <CPUset>3,4,9,10,19,20,25,26</CPUset>
+  <DateInstalled>1724427854</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires></Requires>
+  <Config Name="Google Play Store" Target="GOOGLE_PLAY_STORE" Default="1" Mode="tcp" Description="Launch with Google Play (0 = No, 1 = yes)" Type="Port" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="VM Size" Target="VM_SIZE" Default="1080x1920" Mode="tcp" Description="VM Size" Type="Port" Display="always" Required="false" Mask="false">1080x1920</Config>
+  <Config Name="Web View Port" Target="6080" Default="6080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">6080</Config>
+  <Config Name="Android Forwarding Port" Target="5554" Default="5554" Mode="rw" Description="Android ADB Forwarding Port" Type="Path" Display="always" Required="false" Mask="false">5554</Config>
+  <Config Name="Android ADB Forwarding Port" Target="5555" Default="5555" Mode="rw" Description="Android ADB Forwarding Port" Type="Path" Display="always" Required="false" Mask="false">5555</Config>
+</Container>
