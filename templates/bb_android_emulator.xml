@@ -3,7 +3,7 @@
   <Name>BB - Android Emulator</Name>
   <Repository>budtmo/docker-android:emulator_9.0-with-gapps</Repository>
   <Registry>https://hub.docker.com/r/budtmo/docker-android</Registry>
-  <Network>br0</Network>
+  <Network>eth0</Network>
   <MyIP>192.168.143.22</MyIP>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
